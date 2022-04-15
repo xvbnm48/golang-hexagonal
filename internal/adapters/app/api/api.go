@@ -38,3 +38,12 @@ func (api Adapter) GetSubtraction(a, b int32) (int32, error) {
 
 	return answer, nil
 }
+
+func (api Adapter) GetDivision(a, b int32) (int32, error) {
+	answer, err := api.arith.Division(a, b)
+	if err != nil {
+		return 0, nil
+	}
+
+	return answer, nil
+}
